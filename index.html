@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Private Journal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="lock-screen">
+    <h2>Enter Password</h2>
+    <input type="password" id="password-input" placeholder="Password" />
+    <button onclick="unlockJournal()">Unlock</button>
+    <p id="password-error"></p>
+  </div>
+
+  <div id="journal-app" style="display: none;">
+    <header>
+      <h1>📝 My Journal</h1>
+      <input type="date" id="search-date" />
+      <input type="text" id="search-tag" placeholder="Search by tag" />
+      <button onclick="searchEntries()">🔍</button>
+    </header>
+
+    <section id="entry-form">
+      <textarea id="entry-text" placeholder="Write your journal entry..."></textarea>
+      <input type="text" id="entry-tags" placeholder="Tags (comma-separated)" />
+      <button onclick="saveEntry()">💾 Save Entry</button>
+    </section>
+
+    <section id="calendar-view">
+      <h2>📅 Calendar</h2>
+      <div id="calendar"></div>
+    </section>
+
+    <section id="timeline">
+      <h2>🕓 Timeline</h2>
+      <div id="entries"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
